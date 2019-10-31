@@ -31,7 +31,7 @@ Page({
       success: function(res) {
         console.log(res.data[0].ad_info)
         that.setData({
-          region: [res.data[0].ad_info.province, res.data[0].ad_info.city, res.data[0].ad_info.district]
+          region: [res.data[0].ad_info.province, res.data[0].ad_info.city, res.data[0].ad_info.district]//设置省市区
         }, () => that.getWeather())//获取地址后，再获取天气，异步操作用回调
       },
       fail: function(res) {
