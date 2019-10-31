@@ -1,6 +1,6 @@
-// pages/index/index.js
+var QQMapWX = require('../../qqmap-wx-jssdk1.2/qqmap-wx-jssdk.js')// 引入SDK核心类
+var qqmapsdk;
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -15,7 +15,34 @@ Page({
     })
     this.getWeather();//更新天气
   },
-
+  // 实例化地址API的核心类
+  //参考https://lbs.qq.com/qqmap_wx_jssdk/method-getcitylist.html
+  //询问获取用户地址权限：https://blog.csdn.net/shanshan_1117/article/details/88994160
+  getAPI:function(){
+    qqmapsdk = new QQMapWX({
+      key:'7VJBZ-X26KU-WE6VH-BPU45-ZCWMH-WNBCD'
+    })
+  },
+  // 调用获取地址接口
+  getLocation:function(){
+    var that = this;
+    qqmapsdk.search({
+      keyword: '酒店',
+      success: function (res) {
+        console.log(res.data[0].ad_info)
+        that.setData({
+          region: [res.data[0].ad_info.province, res.data[0].ad_info.city, res.data[0].ad_info.district]
+        })
+      },
+      fail: function (res) {
+        console.log(res);
+      },
+      complete: function (res) {
+        // console.log(res);
+      }
+    })
+  },
+  //获取天气
   getWeather: function() {
     //和风天气api：https://free-api.heweather.net/s6/weather/now?location=beijing&key=859f85df51bd4d80aa8ff62e250dfc68
     var that = this; //this不可以直接在wxAPI函数内部使用
@@ -33,12 +60,12 @@ Page({
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
     this.getWeather();
+    this.getAPI();
   },
 
   /**
@@ -52,7 +79,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    this.getLocation();
   },
 
   /**
