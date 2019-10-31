@@ -1,1 +1,60 @@
-/* pages/index/index.wxss */
+/* 上半区域 
+.shangbanbufen{
+  display: flex;
+  flex-direction: row;
+  height:50vh;
+}
+.left{
+  width:50%;
+  display: flex;
+  justify-content: center;
+}
+.leftImg{
+  width:350rpx;
+  height:600rpx
+}
+.right{
+  display: flex;
+ flex-direction: column;
+ width:350rpx;
+}
+.rightImg{
+  width: 350rpx;
+  height:300rpx;
+}
+
+*/
+
+
+.container{
+  height: 750rpx;
+  display: flex;/*默认布局主轴为水平方向*/
+  flex-direction: row;/*设置主轴
+row水平默认 
+row-reverse从右向左 
+column 垂直方向
+column-reverse从下往上垂直
+*/
+/* justify-content: flex-start */
+/* align-items: stretch */
+flex-wrap: wrap-reverse;/*wrap放不下就换行  nowrap不換行 
+wrap-reverse:換行反方向
+*/
+/* align-content: stretch */
+}
+.a{
+  width:200rpx;
+  height:100rpx;
+  background-color: red
+}
+.b{
+  width:300rpx;
+  height:100rpx;
+  background-color: orange
+}
+.c{
+  width:600rpx;
+  height:100rpx;
+  background-color: skyblue
+}
+

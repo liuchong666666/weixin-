@@ -1,2 +1,20 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<!-- 上半区域
+<view class="shangbanbufen">
+   左半区域 
+  <view class="left">
+    <image src="/images/weixin.jpg" class="leftImg"></image>
+  </view>
+   右半区域 
+  <view class="right">
+    <image src="/images/weixin.jpg" class="rightImg"></image>
+    <image src="/images/weixin.jpg" class="rightImg"></image>
+  </view>
+</view>  -->
+
+
+<view class='container'>
+  <view class="a">项目A</view>
+  <view class="b">项目B</view>
+  <view class="c">项目C</view>
+
+</view>
