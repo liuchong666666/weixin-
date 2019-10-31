@@ -3,6 +3,7 @@
   <picker mode="region" bindchange="changeRegion">
     <view>{{region}}</view>
   </picker>
+  <button bindtap="getSelfLocation">我的位置</button>
   <!-- 区域2：文本区域 -->
   <text>{{now.tmp}}℃ {{now.cond_txt}}</text>
   <!-- 区域3：图片区域 -->
