@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+<map></map>
+<button bindtap="getLocation">
+getLocation</button>
+</view>
