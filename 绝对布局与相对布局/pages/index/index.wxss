@@ -1,0 +1,27 @@
+.container{
+  height:100vh;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  background-color: gray;
+  /* position: absolute; */
+  margin-left: 100rpx;
+  margin-top: 100rpx;
+}
+.a{
+  height: 150rpx;
+  width: 150rpx;
+  background-color: lightgreen;
+  border:1rpx solid black
+}
+.b{
+  height: 150rpx;
+  width: 150rpx;
+  background-color: lightgreen;
+  border:1rpx solid black;
+  /* position: relative;相对定位 */
+  position: absolute;/*绝对定位 如果没有最近的父级定位，就会去找page最大的父级看控制台xml
+*/
+  top:50rpx;
+  left:50rpx;
+}
