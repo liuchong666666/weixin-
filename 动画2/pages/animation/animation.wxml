@@ -1,0 +1,12 @@
+<view class="animation-view" animation="{{donghua}}">动画组件</view>
+<view animation="{{kanjia}}" class="kanjia">
+  <image src="../images/kanjia.jpg"></image>
+</view>
+<button type="primary" size="mini" bindtap="rotate">旋转</button>
+<button type="primary" size="mini" bindtap="scale">缩放</button>
+<button type="primary" size="mini" bindtap="translate">偏移</button>
+<button type="primary" size="mini" bindtap="skew">倾斜</button>
+<button type="primary" size="mini" bindtap="kanjia">砍价</button>
+<button bindtap="sync">同时播放</button>
+<button bindtap="queue">依次播放</button>
+<button bindtap="reset">还原</button>

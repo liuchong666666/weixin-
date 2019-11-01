@@ -1,0 +1,24 @@
+.animation-view{
+    width: 220rpx;
+    height: 220rpx;
+    background-color: lightgreen;
+    margin: 20rpx auto;
+    line-height: 220rpx;
+}
+button{
+  margin: 10rpx;
+}
+
+/*kanjia*/
+.kanjia{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.kanjia image{
+  width: 400rpx;
+  height:300rpx;
+  z-index: 999;
+  /* position: absolute; */
+  opacity: 0.95
+}

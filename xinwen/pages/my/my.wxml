@@ -1,0 +1,26 @@
+<!-- 登录页面 -->
+<view class="myLogin">
+  <image src="{{src}}"></image>
+  <text>{{nickName}}</text>
+</view>
+
+<!-- <view wx:if="{{loginBtn}}">
+  <span></span>  
+</view>
+<view wx:else>
+  <button class="loginBtn" bindgetuserinfo="userLogin" open-type="getUserInfo">登录</button>
+</view> -->
+<block wx:if="{{!isLogin}}">
+  <button class="loginBtn" bindgetuserinfo="userLogin" open-type="getUserInfo">登录</button>
+</block>
+
+<!-- 收藏夹 -->
+<view class="myFavorite">
+  <text>我的收藏（{{newsList.length}}）</text>
+  <view class="news-list">
+    <view class="news-item" wx:for="{{newsList}}" wx:key="{{item.id}}">
+      <image src="{{item.poster}}"></image>
+      <text>{{item.title}}-----{{item.add_date}}</text>
+    </view>
+  </view>
+</view>
