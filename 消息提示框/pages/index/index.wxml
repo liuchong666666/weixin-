@@ -1,0 +1,2 @@
+<button bindtap="show">显示提示框</button>
+<button bindtap="close">关闭提示框</button>

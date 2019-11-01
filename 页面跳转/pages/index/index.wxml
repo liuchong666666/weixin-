@@ -1,0 +1,2 @@
+A
+<button bindtap='goToB'>跳转到B</button>

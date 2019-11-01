@@ -1,0 +1,11 @@
+跳转到新页面 wx.navigateTo(object)
+	保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面。使用 wx.navigateBack 可以返回到原页面。小程序中页面栈最多十层
+
+返回指定页面  	//左上角没有返回键
+wx.navigateBack(object)关闭当前页面，返回上一页面或多级页面
+
+当前页面重定向	//左上角会有返回键
+wx.redirectTo(object)关闭当前页面内容，重定向到应用内某个页面
+
+重启页面
+wx.reLaunch(object)	关闭当前所有页面，重新打开到应用内的某个页面
