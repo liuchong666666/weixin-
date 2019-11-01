@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#663399",
+    
+    "navigationBarTitleText": "个人微信",
+    
+    "backgroundTextStyle": "light"
+    
+  },
+  "sitemapLocation": "sitemap.json"
+}
